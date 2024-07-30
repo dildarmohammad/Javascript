@@ -1,0 +1,39 @@
+<html>
+<!-- Click radio button open diffrent difftent text box -->
+<head>
+  <title>Radio Button Click Show Text</title>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+    $('input[type="radio"]').click(function(){
+        var inputValue = $(this).attr("value");
+        var targetBox = $("." + inputValue);
+        $(".box").not(targetBox).hide();
+        $(targetBox).show();
+    });
+});
+</script>
+
+<style>
+.box{display: none;}
+</style>
+</head>
+
+<body>
+<input type="radio" value="fruits" id="fruits-category" class="fruits-category" name="group" ><span style="font-size: 12px; color:#363B46;"> Fruits</span>
+
+<input type="radio" value="cars" id="cars-category" class="cars-category" name="group"><span style="font-size: 12px; color:#363B46;"> Cars</span>
+
+
+<div class="fruits box">
+This is group of fruits
+</div>
+
+<div class="cars box">
+This is group of Cars
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<a class="button" href="#" onclick="show('popup')">Button</a>
+<!-- HTML JS Popup (Click Button Open Popup) -->
+<div class="popup" id="popup">
+ <p><strong style="color:#4d4aea;">Heading</strong></p>
+  <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+  <p>Company Name</p>
+  <a href="#" onclick="hide('popup')">Close</a>
+</div>
+
+<script>
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+</script>
+
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 350px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  z-index: 20;
+
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+
+}
+
+#popup:before {
+  border-radius: 11px;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+}
+
+/* Styling buttons & webpage */
+
+body {
+  background: offwhite;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+button {
+    margin-top: 50px;
+    background-color: rgba(255,255,255,0.3);
+    border: 3px solid #F04A49;
+    color: #F04A49;
+    font-size: 25px;
+    padding: 10px 20px;
+    
+}
+
+button:hover {
+    background-color: #F04A49;
+    color: #FFF;
+    border: 3px solid #F04A49;
+    transition: all 0.3s ease 0s;
+}
+
+p {
+	margin: 1em 0;
+  font-size: 16px;
+}
+
+/* Styling buttons & webpage */
+
+body {
+  background: offwhite;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+button {
+    margin-top: 50px;
+    background-color: rgba(255,255,255,0.3);
+    border: 3px solid #F04A49;
+    color: #F04A49;
+    font-size: 25px;
+    padding: 10px 20px;
+    
+}
+
+button:hover {
+    background-color: #F04A49;
+    color: #FFF;
+    border: 3px solid #F04A49;
+    transition: all 0.3s ease 0s;
+}
+
+p {
+	margin: 1em 0;
+  font-size: 16px;
+}
+
+</style>
