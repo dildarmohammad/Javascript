@@ -1,0 +1,25 @@
+<html>
+
+<body>
+<script>
+// Masking Number through Javascript
+
+const bankaccount = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+  const spacer = last.match(/.{1,4}/g);
+  return spacer.join(' ');
+};
+
+//console.log(bankaccount(4916490201037007));
+
+
+//Output on Page
+
+document.write (bankaccount(4916490201037007));
+
+</script>
+
+</body>
+</html>
